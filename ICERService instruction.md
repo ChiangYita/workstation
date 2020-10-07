@@ -12,7 +12,7 @@ Step 1: 啟動cgitb
 ```
 cgitb.enable()
 ```
-
+<br>
 Step 2: 定義InitLog功能
 ```
 def InitLog(tmLocationID, deviceID):
