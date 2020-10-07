@@ -22,20 +22,21 @@ def InitLog(tmLocationID, deviceID):
 ```
 > log設定部分改成下方取得完整Reader ID後，再設定logging.getLogger('readerID')，
 且放在對應Reader資料夾下
-
 <br>
+
 Step 3: 獲取資料 -Get url argument value
 ```
 arguments = cgi.FieldStorage()
 ```
-
 <br>
+
 Step 4. 檢查資料 -Check argument field 'data' exist
 ```
 try :
     jsonData = json.loads(requestData)
 ```
 > 此處發生錯誤代碼為 908000
+<br>
 
 Step 5. 轉換json格式 -Convert json data to python dict format
 ```
@@ -43,6 +44,7 @@ try :
     jsonData = json.loads(requestData)
 ```
 > 此處發生錯誤代碼為 908001
+<br>
 
 Step 6. 取得分店與裝置號碼 -Get Terminal ID & Device ID
 ```
