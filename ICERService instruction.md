@@ -1,9 +1,9 @@
 # ICERService主程式內容 (以ICER parking為例)
 
 > 主要執行功能如下：<br>
-Get JSON data from url parameter
-Check JSON fields
-Create XML File
+Get JSON data from url parameter <br>
+Check JSON fields <br>
+Create XML File <br>
 Call ICER Service
 
 
