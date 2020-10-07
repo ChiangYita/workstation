@@ -13,6 +13,7 @@ Step 1: 啟動cgitb
 cgitb.enable()
 ```
 <br>
+
 Step 2: 定義InitLog功能
 ```
 def InitLog(tmLocationID, deviceID):
@@ -22,11 +23,13 @@ def InitLog(tmLocationID, deviceID):
 > log設定部分改成下方取得完整Reader ID後，再設定logging.getLogger('readerID')，
 且放在對應Reader資料夾下
 
+<br>
 Step 3: 獲取資料 -Get url argument value
 ```
 arguments = cgi.FieldStorage()
 ```
 
+<br>
 Step 4. 檢查資料 -Check argument field 'data' exist
 ```
 try :
