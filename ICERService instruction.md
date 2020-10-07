@@ -56,7 +56,7 @@ readerID = tmLocationID + deviceID
 > Terminal ID發生錯誤代碼為 908002，Device ID發生錯誤代碼為 908003
 
 以上步驟均完成後，列印"**ICER Service Starts**"，以下步驟開始使用新創建的模組
-
+<br>
 
 ## 使用新創模組
 Step 7. 建立log檔，以及相對應的資料夾
@@ -64,6 +64,7 @@ Step 7. 建立log檔，以及相對應的資料夾
 InitLog(tmLocationID, deviceID)
 log = logging.getLogger('ICERService')
 ```
+<br>
 
 Step 8. 建立Service類別 -Check service type field exist and type
 ```
@@ -92,18 +93,21 @@ Service Type包括以下：
 - FieldState
 - REQ
 - RES
+<br>
 
 Step 9. 確認Reader是否有在使用
 ```
 readerUsedState = ReaderUsed(service.filePath)
 ```
 > 此處發生錯誤代碼為 900001
+<br>
 
 Step 10. 確認資料欄位是否存在及長度是否正確
 ```
 service.FieldCheck()
 ```
 > 此處發生錯誤代碼為 908005
+<br>
 
 Step 11. 特殊serviceType(非ICER交易相關)先行處理，由此執行後直接結束
 
@@ -125,12 +129,15 @@ readerUsedState.Release()
 log.info("ICER service end \n")
 exit(0)
 ```
+<br>
+
 Step 12. 確認Reader資料夾存在與否，建立及更新執行&資料檔。若沒問題，會回傳黑名單檔名(含副檔名)
 ```
 blackListName = CheckReaderFolderExist.Start(service.filePath)
 log.info("Black list file name : " + blackListName)
 ```
 > 此處發生錯誤代碼為 909960
+<br>
 
 Step 13. 修改ICERINI.xml相關參數
 ```
@@ -138,9 +145,11 @@ comPort = service.ttyICER
 xmlFilePath = service.filePath + "ICERINI.xml"
 ```
 > 此處發生錯誤代碼為 909961
+<br>
 
 Step 14. 建立交易用XML檔
 `service.REQ()`
+<br>
 
 Step 15. 啟動icerapi相關服務功能
 ```
@@ -149,3 +158,4 @@ print ExecuteICERAPI.Start(service)
 readerUsedState.Release()
 log.info("ICER service end \n")
 ```
+<br>
