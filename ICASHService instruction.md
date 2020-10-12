@@ -18,7 +18,7 @@ class switch(object):
 
 Step 2. 啟動cgitb `cgitb.enable()`
 
-step 3. 定義`SetjsonData`功能
+Step 3. 定義`SetjsonData`功能
 ```
 ttyApiPort = Tools.GetPrivateProfileString(...)
 ttyServicePort = Tools.GetPrivateProfileString(...)
