@@ -17,3 +17,28 @@ import cgi, cgitb
 
 form = cgi.FieldStorage()
 ```
+
+### ReaderUsed
+讀取讀卡機所在目錄與dat檔，確認讀卡機是否有在使用；
+若沒有，將使用狀態改為使用中並寫入dat檔，最後回傳`True`
+```
+log.info("Check reader used state ...")
+self.Get()
+...
+log.info("Reader not used !")
+return self.Set("1")
+...
+log.info("Setting reader in use state ...")
+readerState.write(data)
+...
+log.info("Setting done !")
+return True
+```
+
+### ServiceType
+只有一個function，查看要用的服務並返回各項服務的物件。
+- `SignON` : 含`FieldCheck`、`FieldState`、`DecryptoAndUnpack`、`PackAndCrypto`、`REQ`、`RES`、`CheckAutoTopUpAmount`
+- `Refund` : 含`FieldCheck`、`FieldState`、`DecryptoAndUnpack`、`PackAndCrypto`、`REQ`、`RES`、`CheckAutoTopUpAmount`
+.
+.
+.
