@@ -42,3 +42,7 @@ return True
 .<br>
 .<br>
 .
+
+
+### DongleDataStruct
+將傳入字串形態的整數轉成16進制字串存下
