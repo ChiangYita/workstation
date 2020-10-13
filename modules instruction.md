@@ -10,3 +10,10 @@ cgitb.enable(display=1, logdir=None, context=5, format="html")
 - `context` : 預設值5，目前追蹤資料源代碼顯示的上下文數量
 - `format` : 預設值"html"，改為其他任何數值會改用純文字輸出
 
+### cgi.FieldStorage()
+建立FieldStorage的實例(instance)
+```
+import cgi, cgitb
+
+form = cgi.FieldStorage()
+```
