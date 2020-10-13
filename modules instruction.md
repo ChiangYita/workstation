@@ -36,9 +36,9 @@ return True
 ```
 
 ### ServiceType
-只有一個function，查看要用的服務並返回各項服務的物件。
+只有一個function，查看要用的服務並返回`ServiceClass`內各項服務的物件。
 - `SignON` : 含`FieldCheck`、`FieldState`、`DecryptoAndUnpack`、`PackAndCrypto`、`REQ`、`RES`、`CheckAutoTopUpAmount`
-- `Refund` : 含`FieldCheck`、`FieldState`、`DecryptoAndUnpack`、`PackAndCrypto`、`REQ`、`RES`、`CheckAutoTopUpAmount`
-.
-.
+- `Refund` : 含`FieldCheck`、`FieldState`、`DecryptoAndUnpack`、`PackAndCrypto`、`REQ`、`RES`、`CheckAutoTopUpAmount`<br>
+.<br>
+.<br>
 .
