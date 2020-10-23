@@ -2,6 +2,7 @@
 
 ## ServiceType.py
 1. 去除`class` Switch
+1. 忽略非交易類相關服務
 
 ## ICASH2Service.py (主程式)
 1. 刪除程式內沒有使用的`import`模組
@@ -12,5 +13,7 @@
 > - `if jsonData.has_key('TerminalID')...` --> 
 > `if 'TerminalID' in jsonData...`
 1. 把建立log、建立log資料夾的程式改為function：`init_log(log_path)`
-1. 刪除非交易類服務
+1. 忽略非交易類相關服務
 
+## ExecuteAPI.py
+1. 去除`def __init__()`的`return`語法，改為`print`
